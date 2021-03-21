@@ -11,9 +11,9 @@ public class Könyv {
 
 		}
 		
-		public String kiiras() {
+		/*public String kiiras() {
 			return "Cím: " + cim + ", Szerző:" + szerzo + ", Megjelenés éve: " + megjelenes_eve + ", Ár: " + ar + " Ft"; 
-		}
+		}*/
 		
 		public void setCim(String cim) {
 			this.cim = cim;
@@ -49,6 +49,30 @@ public class Könyv {
 		public long getAr() {
 			return this.ar;
 		}
+		
+		public Könyv(String cim, String szerzo, long megjelenes_eve, long ar) {
+			this.cim = cim;
+			this.szerzo = szerzo;
+			this.megjelenes_eve = megjelenes_eve;
+			this.ar = ar;
+		}
+		
+		public Könyv(String szerzo, String cim) {
+			this.szerzo = szerzo;
+			this.cim = cim;
+		}
+
+		@Override
+		public String toString() {
+			return "Könyv [Cím: " + cim + ", Szerző: " + szerzo + ", Megjelenés éve: " + megjelenes_eve + ", Ár: " + ar
+					+ " Ft" + " ]";
+		}
+		
+		public String kiiras() {
+			return "Cím: " + cim + ", Szerző: " + szerzo ; 
+		}
+		
+		
 		
 	}
 
